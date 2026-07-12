@@ -1,0 +1,12 @@
+interface:
+  display_name: "Business Outcome Research"
+  short_description: "Ground decisions in business logic, evidence, and risk"
+  default_prompt: "Use $business-outcome-research to investigate this decision, model the business lifecycle, and give one evidence-backed recommendation."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "exa"
+      description: "Exa MCP for current external research and source retrieval"
+      transport: "streamable_http"
+      url: "https://mcp.exa.ai/mcp"
