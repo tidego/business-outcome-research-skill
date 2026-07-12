@@ -41,12 +41,14 @@ The business owner defines product intent and authorized scope. Do not turn risk
 ### 4. Test end-to-end feasibility
 
 - Compare every platform limit with the full business liability window.
+- Treat a mismatch across individually valid components as a defect when it violates an explicit business invariant. A payment API may work correctly while its control window still makes the product unsafe to launch.
 - Reject a capability that exists but is unavailable to the user, does not apply to the business category, expires too early, or leaves a critical loss unassigned.
 - Trace cancellation, refund, dispute, reversal, insolvency, timeout, partial failure, duplicate event, stale state, and exhausted-balance paths.
 - Run an adversarial scenario in which a counterparty scales abuse quickly, withdraws value, or stops cooperating.
 - Label a control that only reduces risk as a mitigation, never as a complete solution.
 - Classify each finding as `verified defect`, `verified external requirement`, `risk`, `product choice`, `optional improvement`, or `unresolved`.
 - Call something a defect only when it violates an explicit requirement, invariant, test, security boundary, or authoritative external rule. Do not promote a design preference into a bug or severity label.
+- Do not infer a missing workflow from the first route or service. Trace approval paths, workers, callbacks, and automatic completion branches before assigning severity.
 
 ### 5. Make one decision
 

@@ -56,6 +56,8 @@ Do not assign P0/P1 severity to `risk`, `product choice`, `optional improvement`
 
 Perform a negative-evidence check: “Did I prove the flow is absent, or did I only fail to find it in the first file?”
 
+A business-critical defect may exist between components even when each component works as documented. Compare the customer promise with the longest control window. If the promise remains active after the platform control expires and no independent recovery source covers the gap, test that mismatch against the stated invariant and launch criteria. Do not wait for one API or test to fail before recognizing it.
+
 ## 4. Evidence ledger
 
 For each material claim record:
